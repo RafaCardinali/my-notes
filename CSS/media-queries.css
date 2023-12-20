@@ -1,0 +1,15 @@
+/* Para Mobile */
+@media screen and (max-width: 767px) { 
+    
+}
+
+/* Para tablets */
+@media screen and (min-width: 767px) and (max-width: 1199px) { 
+    
+}
+
+/* Para Desktop */
+
+@media screen and (min-width: 1200px){
+    
+}
