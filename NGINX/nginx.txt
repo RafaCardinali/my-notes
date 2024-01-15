@@ -1,0 +1,39 @@
+Para configurar o nginx é necessario abrir tanto o cmd dentro do diretório onde o nginx se encontra, quanto o arquivo chamado "nginx.conf", os passos para isso são:
+
+ABRIR CMD NO DIRETÓRIO:
+
+1.Abra o cmd e navegue utilizando "cd" até o diretório.
+
+ABRIR O ARQUIVO "NGINX.CONF":
+
+1.Abra o diretório onde se encontra o Nginx;
+2.Entre na pasta "conf";
+3.Abra o arquivo chamado "nginx.conf" utilizando o VSCode.
+
+Após isso, dentro do arquivo "nginx.conf", você deve procurar onde está localizado a propriedade "server", ao encontra-lá atualize para o seguinte código:
+
+    server {
+        listen       80;
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / {
+            root   C:/Users/rflca/projects/gastronomy-lp-demo;
+            index  index.html index.htm;
+            ssi on;
+        }
+
+Na qual:
+
+listen =  especifica em qual porta o servidor NGINX deve escutar as solicitações de entrada. No contexto da web, a porta padrão para HTTP é a porta 80;
+server_name = o nome do seu servidor;
+root = o diretório onde o Nginx vai trabalhar;
+index = define quais arquivos o NGINX deve procurar dentro de um diretório quando um diretório é solicitado. Se nenhum arquivo específico for solicitado, o NGINX buscará esses arquivos na ordem listada;
+ssi = Esta diretiva ativa ou desativa os Server-Side Includes (SSI) em um contexto de localização. SSI é um recurso simples de inclusão e processamento de diretivas do lado do servidor dentro de páginas HTML.
+
+
+
+
